@@ -8,7 +8,8 @@ const xhr = new XMLHttpRequest()
 xhrBtn.addEventListener('click', function(){
     xhr.onreadystatechange = function(){
         if(xhr.readyState == 4 && xhr.status == 200) {
-            quote.innerText = xhr.responseText
+            var quote = JSON.parse(xhr.responseText)
+            quote.innerText = quote
         }
     }
     
