@@ -4,6 +4,15 @@ axios.get(url)
 .then((res) =>{
     console.log(res.data)
 })
-.catch((err) =>{
-    console.log(err)
-})
+.catch(handleErrors)
+
+//error handling
+function handleErrors (error) {
+    if(error.response) {
+        console.log('Problem with response '+ error.response.status)
+    } else if (err.request) {
+        console.log('Problem with request')
+    } else {
+        console.log('Error '+err.message)
+    }
+}
