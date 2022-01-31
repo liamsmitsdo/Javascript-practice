@@ -60,9 +60,24 @@ describe('arrays', function(){
 })
 
 //pending tests - mark it with an x or add pending() inside it
-
 describe('pending specs', function(){
     xit('can start with an xit', function(){
         expect(true).toBe(true)
+    })
+})
+
+//jasmine spies
+//spyOn() or jasmine.createSpy()
+function add(a,b,c) {return a+b+c}
+
+describe('add', function(){
+    let addSpy, result
+    beforeEach(function(){
+        addSpy = spyOn(window, 'add').and.callThrough()
+        result = addSpy(1,2,3)
+    })
+    it('is can have params tested', function(){
+        expect(addSpy).toHaveBeenCalled()
+        expect(addSpy).toHaveBeenCalledWith(1,2,3)
     })
 })
