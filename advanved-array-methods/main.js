@@ -20,3 +20,4 @@ array3.filter(function(value,index,array) {
     return value%2===0 //only the values that are true will be in the new array
 })
 
+//some
