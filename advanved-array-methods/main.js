@@ -33,3 +33,17 @@ const array5 = [-1,-2,-3]
 array5.every(function(value, index, array) {
     return value > 0
 })
+
+//reduce
+//takes an array and turns it into another data structure
+const array6 = [1,2,3,4,5]
+array6.reduce(function(accumulator,nextValue,index,array) {
+    return accumulator + nextValue //the value of the accumulator is the number we just returned
+}, 10)//this means the accumulator is 10
+
+//reduce cont.
+const name = ['Tim', 'Matt', 'Colt', 'Elie']
+names.reduce(function(accumulator,nextValue){
+    return accumulator += ' ' + nextValue
+},'The instructors are')
+//The instructors are Tim Matt Colt Elie
