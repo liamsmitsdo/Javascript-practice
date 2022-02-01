@@ -21,3 +21,15 @@ array3.filter(function(value,index,array) {
 })
 
 //some
+//if the callback returns true on at least one value, the entire method returns true
+const array4 = ['hello', 'world']
+array4.some(function(value,index,array) {
+    return value == 'hello'
+})
+
+//every
+//if any value returns false, the entire method will return false
+const array5 = [-1,-2,-3]
+array5.every(function(value, index, array) {
+    return value > 0
+})
