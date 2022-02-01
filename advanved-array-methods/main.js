@@ -7,3 +7,8 @@ array.forEach(function(value, index, array) {
 })
 
 //map
+//always need to return within the callback
+const array2 = [2,4,6]
+array2.map(function(value, index, array) {
+    return value / 1
+})
