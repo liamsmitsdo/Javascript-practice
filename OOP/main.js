@@ -1,5 +1,5 @@
 //Javascript does not have built in support for OOP
-
+//this section might be outdated
 //constructor functions
 function House(bedrooms,bathrooms,numSqft) {
     this.bedrooms = bedrooms
