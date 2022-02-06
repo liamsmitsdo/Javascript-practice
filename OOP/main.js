@@ -38,3 +38,24 @@ function Motorcycle() {
     this.numWheels = 2
 }
 
+
+//prototypes
+//when a new instance of a constructor is called using the new keyword, the __proto__ property gets added to that instance
+//methods can be added to the prototype property and accessed on every instance
+function Person(name) {
+    this.name = name
+    this.sayHi = function(){ //this function will get defined each time, not good
+        return 'Hi '+ this.name
+    }
+}
+
+//refactor
+function Person(name) {
+    this.name = name
+}
+
+Person.prototype.sayHi = function() { //this uses the proto property to store the method, which doesnt need to remake the function each time
+    return 'Hi '+ this.name
+}
+
+//inheritance
