@@ -59,3 +59,6 @@ Person.prototype.sayHi = function() { //this uses the proto property to store th
 }
 
 //inheritance
+//we pass the __proto property from one to another
+//use Object.create
+//reset the constructor property
